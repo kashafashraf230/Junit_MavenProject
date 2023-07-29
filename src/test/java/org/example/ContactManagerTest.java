@@ -17,8 +17,8 @@ class ContactManagerTest {
     public void shouldCreateContact(){
         ContactManager contactManager = new ContactManager();
         contactManager.addContact("Kashaf", "Ashraf", "03048888909");
-        Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
-
+        Assertions.assertFalse(contactManager.getAllContacts().isEmpty()); //To make sure that contact list is not empty
+        Assertions.assertEquals(1, contactManager.getAllContacts().size()); //To make sure there is exactly one item in the contact list
     }
 
     @AfterEach

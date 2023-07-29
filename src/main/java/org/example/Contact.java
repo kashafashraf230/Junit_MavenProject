@@ -63,12 +63,12 @@ public class Contact {
         }
 
 
-        if (this.phoneNumber.matches("\\d") ){
+        if (!this.phoneNumber.matches("\\d+") ){
             throw new RuntimeException("Phone Number should only contain digits");
         }
 
 
-        if (this.phoneNumber.startsWith("0")){
+        if (!this.phoneNumber.startsWith("0")){
             throw new RuntimeException("Phone Number should start with 0");
         }
     }
